@@ -1,0 +1,96 @@
+body {
+    width: 100%;
+    font-family: 'Cardo', serif;
+    background-color: #fedcd2;
+}
+
+.container {
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+
+.container h1, input {
+    text-align: center;
+}
+
+.container input {
+    width: 100%;
+    font-family: 'Cardo', serif;
+}
+
+.inputwrapper {
+    position: absolute;
+    width: 400px;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 2;
+    font-size: 150%;
+}
+
+input::-webkit-input-placeholder {
+    color: black;
+    transition: color 0.5s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.bg {
+    height: 0%;
+    width: 100%;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    z-index: -2;
+    transition: height 0.7s cubic-bezier(0.76, -0.76, 0.25, 1.26);
+}
+
+input:focus + .bg {
+    height: 100%;
+}
+
+ul {
+    margin-top: 5rem;
+}
+
+ul, li {
+    list-style: none;
+    font-size: 120%;
+}
+
+li:hover {
+    text-decoration: line-through;
+    cursor: pointer;
+}
+
+@media only screen and (min-device-width:200px) and (max-device-width:700px) {
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .inputwrapper {
+        width: 94%;
+    }
+    
+    input {
+        font-size: 330%;
+    }
+    
+    ul {
+        margin-top: 10rem;
+    }
+    
+    ul, li {
+        list-style: none;
+        font-size: 220%;
+    }
+}
